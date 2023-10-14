@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/pendu1.png">
+    <title>PENDU</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap');
+    </style>
+</head>
+
+<body>
+
+    <h1><em>Le bonhomme du Pendu</em></h1>
+
+    <p id="ruleOfGame">Un grand classique afin de se faire les pieds à nouveau avec html et la logique de programmation &#129322;( et de style &#129320;).<br> Entrez une lettre à la fois afin de deviner le mot caché. Faites aller vos méninges!!<br> Par contre, on y va molo,
+        pas de majuscule &#11014; et la bibliothèque de mot n'est pas dynamique donc sorry mais <br>mon imagination est telle que vous la connaissez &#127798; ... next level in progress &#128525; <br><br><br> &#128071;&#127996;&#128071;&#127996;&#128071;&#127996;
+        Avec la souris, survolez le dessous de ce texte, sous les tirets!! &#128071;&#127996;&#128071;&#127996;&#128071;&#127996;
+    </p>
+
+    <div id="transparencyWords"> &#128073;&#127996; Je test mon message subliminal...c'est de la balle mdr &#128072;&#127996;</div>
+
+    <!-- DIV pour contenir tout le jeu-->
+    <div class="jeu-contenant">
+
+        <!-- svg : is used to define graphics for the Web -->
+        <svg width="200" height="250" class="figure-contenant">
+        <!-- testing svg from w3school
+            <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+        -->
+
+        <!--  SUPPORT-->
+        <!-- top ligne-->
+        <line  x1="60" y1="20" x2="140" y2="20" />
+        <!-- petite ligne droite verticale -->
+        <line  x1="140" y1="20" x2="140" y2="47" />
+        <!-- grande ligne gauche verticale -->
+        <line  x1="60" y1="20" x2="60" y2="180" />
+        <!-- bottom ligne-->
+        <line  x1="40" y1="180" x2="80" y2="180" />
+
+        <!--  BONHOMME-->
+        <!--  TETE-->
+            <circle cx="140" cy="60" r="10" stroke="#E9967A" stroke-width="2" fill="transparent" class="figure-partie"/>
+        <!-- CORPS-->
+        <line  x1="140" y1="73" x2="140" y2="130" stroke="#E9967A" stroke-width="2" stroke-linecap="round"; class="figure-partie"/>
+        <!-- BRAS - GAUCHE-->
+        <line  x1="140" y1="73" x2="115" y2="85" stroke="#E9967A" stroke-width="2" stroke-linecap="round"; class="figure-partie"/>
+        <!-- BRAS - DROIT-->
+        <line  x1="140" y1="73" x2="165" y2="85" stroke="#E9967A" stroke-width="2" stroke-linecap="round"; class="figure-partie"/>
+        <!-- PIED - GAUCHE-->
+        <line  x1="140" y1="130" x2="115" y2="150" stroke="#E9967A" stroke-width="2" stroke-linecap="round"; class="figure-partie"/>
+        <!-- PIED - DROIT-->
+        <line  x1="140" y1="130" x2="165" y2="150" stroke="#E9967A" stroke-width="2" stroke-linecap="round"; class="figure-partie"/>
+        
+    
+        </svg>
+
+        <!-- Voir les mauvaises lettres -->
+        <div class="bad-letters-contenant">
+            <p>Mauvaises lettres</p>
+            <div id="bad-letters"></div>
+        </div>
+
+        <div class="word" id="word"><span class="letter"></span>
+        </div>
+
+    </div>
+    <!-- fermeture div: jeu-contenant"-->
+
+
+    <!-- Contenant message final (success/failed)-->
+    <div class="popup-contenant" id="popup-contenant">
+        <!-- SUCCESS-->
+        <div class="popup" id="play-popup">
+            <h2 id="final-message"></h2>
+            <button id="play-button">Rejouer</button>
+        </div>
+    </div>
+    <!-- fermeture popup-contenant-->
+
+    <!-- Notification : lettre dupliquée-->
+    <div class="notification-contenant" id="notification-contenant">
+        <p>Vous avez déjà entré cette lettre! Try again!</p>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

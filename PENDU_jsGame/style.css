@@ -1,0 +1,170 @@
+html {
+    height: auto;
+}
+
+body {
+    background-color: brown;
+    /* background-image: linear-gradient(70deg, #354961, #E9967A, #354961, #EAC48D); */
+    color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+    height: auto;
+}
+
+#ruleOfGame {
+    padding: 20px 30px;
+    border: 2px dotted #EAC48D;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: large;
+}
+
+#ruleOfGame p {
+    color: #354961;
+}
+
+#transparencyWords {
+    opacity: 0.01;
+}
+
+#transparencyWords:hover {
+    font-size: medium;
+    color: black;
+    opacity: 1;
+}
+
+.figure-contenant {
+    stroke: #fff;
+    stroke-width: 4px;
+    /* arrondi les coins de la ligne */
+    stroke-linecap: round;
+    /* remplissage du rond*/
+    fill: transparent;
+    /*font-family: 'Borel', cursive;*/
+    font-family: 'Shadows Into Light Two', cursive;
+    letter-spacing: 3px;
+}
+
+.jeu-contenant {
+    font-family: 'Shadows Into Light Two', cursive;
+    padding: 20px 30px;
+    margin: auto;
+    height: auto;
+    width: 450px;
+    position: relative;
+}
+
+h1 {
+    margin: 20px 0 0;
+    font-size: 50px;
+    font-family: 'Shadows Into Light Two', cursive;
+    letter-spacing: 10px;
+    text-shadow: 2px 2px 2px #354961;
+}
+
+.figure-partie {
+    display: none;
+}
+
+.bad-letters-contenant {
+    position: absolute;
+    letter-spacing: 2px;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-size: large;
+}
+
+#bad-letters {
+    letter-spacing: 5px;
+}
+
+.bad-letters-contenant p {
+    margin: 0 0 5px;
+    color: #E9967A;
+}
+
+.bad-letters-contenant span {
+    font-size: 24px;
+    font-family: 'Shadows Into Light Two', cursive;
+}
+
+.word {
+    display: flex;
+    position: absolute;
+    /*à changer???*/
+    margin-bottom: auto;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.letter {
+    border-bottom: 3px solid #fff;
+    display: inline flex;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3px;
+    height: 50px;
+    width: 30px;
+    font-family: 'Shadows Into Light Two', cursive;
+}
+
+.popup-contenant {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /*display: flex;*/
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup {
+    background-color: rgb(104, 16, 16);
+    border-radius: 5px;
+    box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    text-align: center;
+}
+
+.popup button {
+    cursor: pointer;
+    background-color: #fff;
+    column-rule: #354961;
+    border: 0;
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+}
+
+.popup button:active {
+    transform: scale(0.98);
+}
+
+.popup button:focus {
+    outline: 0;
+}
+
+.notification-contenant {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px 10px 0 0;
+    padding: 15PX 20px;
+    position: absolute;
+    bottom: -80px;
+    /* à faire apparaître avec js*/
+    transition: transform 0.3 ease-in-out;
+}
+
+.notification-contenant.afficher {
+    transform: translateY(-80px);
+}

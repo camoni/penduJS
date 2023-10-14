@@ -1,0 +1,5 @@
+** Afficher le mot non trouvé -- fixed
+** refresh la page quand jeu terminé -- fixed
+** bibliothèque dynamique
+** font compatible sur tous les navigateurs (style.css) 
+** pop up d'ouverture 
